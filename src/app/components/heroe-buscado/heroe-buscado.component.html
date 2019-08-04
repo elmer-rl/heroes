@@ -1,0 +1,23 @@
+<main>
+    <section class="m-5">
+        <h1 align="center">
+            Heroes Encontrados de Marvel y DC
+        </h1>
+        <h2>Heroes buscado : {{heroeencotrado}}</h2>
+
+        <div class="row">
+            <div *ngIf="heroes.length <= 0" class="col-md-12">
+                <div class="alert alert-info p-5">
+                    <h3>No se encontraron resultados para <strong>{{heroeencotrado}}</strong></h3>
+                </div>
+            </div>
+        </div>
+
+        <div class="content">
+            <div class="card-columns">
+                <app-heroe-tarjeta [heroe]="heroe" [index]="heroe.idx" *ngFor="let heroe of heroes;let i = index"></app-heroe-tarjeta>
+            </div>
+        </div>
+
+    </section>
+</main>

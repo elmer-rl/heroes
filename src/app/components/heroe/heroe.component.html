@@ -1,0 +1,25 @@
+<h1> {{heroes.nombre | uppercase}} <small> ( {{heroes.aparicion | date: 'y'}} )</small></h1>
+
+<div class="row">
+    <div class="col-md-4">
+        <img src="{{heroes.img}}">
+        <hr>
+        <button class="btn btn-outline-info" [routerLink]="['/heroes']" routerLinkActive="router-link-active"> 
+          Ver heroes
+        </button>
+    </div>
+    <div class="col-md-8">
+        <h3> {{heroes.nombre}} </h3>
+        <p>
+            {{heroes.bio}}
+        </p>
+
+        <div class="casa">
+            <img *ngIf="casa == 'DC'" src="../../../assets/img/dc.jpg" alt="">
+            <img *ngIf="casa == 'Marvel'" src="../../../assets/img/marvel.jpg" alt="">
+        </div>
+
+    </div>
+
+
+</div>

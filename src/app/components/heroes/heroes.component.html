@@ -1,0 +1,14 @@
+<main>
+    <section class="m-5">
+        <h1 align="center">
+            Heroes de Marvel y DC
+        </h1>
+
+        <div class="content">
+            <div class="card-columns">
+                <app-heroe-tarjeta (seleccionado)="vermas($event)" [heroe]="heroe" [index]="i" *ngFor="let heroe of heroes;let i = index"></app-heroe-tarjeta>
+            </div>
+        </div>
+
+    </section>
+</main>
